@@ -8,7 +8,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       <section className="h-full w-full flex flex-col overflow-auto">
         <Navbar />
-        <section className="py-14 px-10">{children}</section>
+        <section className="py-14 px-10">
+          <div className="mx-auto max-w-[73.25rem]">{children}</div>
+        </section>
       </section>
     </main>
   );

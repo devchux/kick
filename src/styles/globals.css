@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -83,6 +84,10 @@
   --color-mirage: #171e2f;
   --color-pomengranate: #EA3D17;
   --color-blue-bell: #928CCE;
+
+  /* Custom fonts */
+  --font-bungee: "Bungee", sans-serif;
+  --font-red-hat-display: "Red Hat Display", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -134,6 +139,6 @@
     font-size: calc(100vw * 16 / 1440);
   }
   body {
-    @apply bg-black-pearl text-foreground;
+    @apply bg-black-pearl text-foreground !text-base !font-red-hat-display;
   }
 }
