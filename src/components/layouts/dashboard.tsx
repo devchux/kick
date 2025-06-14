@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Sidebar from "../sidebar";
 import Navbar from "../navbar";
 import { cn } from "@/lib/utils";
 import { ChevronRightIcon } from "lucide-react";
 import MobileNavbar from "../navbar/mobile";
-import { useMedia } from "react-use";
+import { AppContext } from "@/contexts/app";
 
 const DashboardLayout = ({
   children,
@@ -13,16 +13,7 @@ const DashboardLayout = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  const isTablet = useMedia('(min-width: 768px)');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
-  useEffect(() => {
-    setIsSidebarOpen(isTablet);
-  }, [isTablet])
+  const { toggleSidebar, isSidebarOpen } = useContext(AppContext);
 
   return (
     <main className="flex h-dvh overflow-hidden relative">
