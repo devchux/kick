@@ -8,9 +8,9 @@ const Trivia = () => {
   const router = useRouter();
 
   return (
-    <DashboardLayout className="pt-0">
+    <DashboardLayout className="md:pt-0">
       <h4 className="text-lg font-bungee text-center">Choose your avatar</h4>
-      <div className="grid grid-cols-6 max-w-[44.7rem] gap-y-14 mt-10 mb-12 mx-auto">
+      <div className="grid grid-cols-4 md:grid-cols-6 max-w-[44.7rem] gap-y-7 sm:gap-y-14 mt-10 mb-12 mx-auto">
         {Array.from({ length: 24 }, (_, i) => i + 1).map((i) => (
           <Image
             key={i}

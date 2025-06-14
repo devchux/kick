@@ -23,7 +23,7 @@ const TriviaDay = () => {
         <Image
           src="/assets/images/question-round.png"
           alt=""
-          className="w-16 h-16 mt-4 mb-5 mx-auto"
+          className="w-12 h-12 md:w-16 md:h-16 mt-4 mb-5 mx-auto"
         />
         <p className="text-center max-w-[27.5rem] mx-auto text-white/55 mb-8">
           Earn extra KICK points by engaging exciting questions on the trivia of

@@ -12,7 +12,7 @@ const TriviaCard = ({
 }) => {
   return (
     <div
-      className="max-w-60 bg-big-stone p-3 text-center flex flex-col items-center justify-center gap-4 rounded-xl h-[9.75rem] cursor-pointer"
+      className="sm:max-w-60 bg-big-stone p-3 text-center flex flex-col items-center justify-center gap-4 rounded-xl h-[9.75rem] cursor-pointer"
       onClick={onClick}
     >
       <Image src={icon} alt="" className="w-10 h-10" />

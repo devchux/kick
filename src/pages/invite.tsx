@@ -16,7 +16,7 @@ const Invite = () => {
           Plus up to 25% on their winnings. Enjoy consistent commissions whether
           they win or lose, in our Casino and Sportbook. Start earning now!
         </p>
-        <div className="flex gap-11">
+        <div className="flex gap-11 flex-col md:flex-row">
           <div>
             <p className="text-gray-500 mb-2.5">Referral link</p>
             <ReferralCode code="https://www.example.com/referral5" />
@@ -31,7 +31,7 @@ const Invite = () => {
         <p>Your referrals</p>
         <small className="text-xs mt-3 mb-4 block">Control your earnings</small>
         <div className="overflow-auto">
-          <table className="min-w-[47rem]">
+          <table className="min-w-[27rem] md:min-w-[47rem]">
             <thead>
               <tr>
                 <th className="text-left text-boulder text-xs">NAME</th>

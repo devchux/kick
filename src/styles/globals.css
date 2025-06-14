@@ -146,6 +146,16 @@
   html {
     font-size: calc(100vw * 16 / 1440);
   }
+  @media only screen and (max-width: 767px) {
+    html {
+      font-size: calc(100vw * 16 / 767);
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    html {
+      font-size: calc(100vw * 16 / 390);
+    }
+  }
   body {
     @apply bg-black-pearl text-foreground !text-base !font-red-hat-display;
   }

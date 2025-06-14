@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../image";
 import Bonus from "./bonus";
 import SidebarSection from "./section";
+import { cn } from "@/lib/utils";
 
 const SECTION_ONE = [
   {
@@ -49,9 +50,9 @@ const SECTION_TWO = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <section className="h-full w-80 overflow-auto border border-white/25 pt-10 px-5 pb-5">
+    <section className={cn("absolute z-50 md:static h-full w-80 overflow-auto border border-white/25 bg-black-pearl pt-10 px-5 pb-5", { "absolute -left-80": !isOpen })}>
       <Image
         src="/assets/images/logo.png"
         alt=""

@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 
 const ArcadeCard = ({ hasLiked }: { hasLiked?: boolean }) => {
   return (
-    <div className="h-[17.4rem] w-full max-w-[22rem] overflow-hidden rounded-2xl bg-mirage">
+    <div className="h-[17.4rem] w-full sm:max-w-[22rem] overflow-hidden rounded-2xl bg-mirage">
       <Image
         src="/assets/images/test.png"
         alt=""
