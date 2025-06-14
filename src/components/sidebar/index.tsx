@@ -52,7 +52,7 @@ const SECTION_TWO = [
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <section className={cn("absolute z-50 md:static h-full w-80 overflow-auto border border-white/25 bg-black-pearl pt-10 px-5 pb-5", { "absolute -left-80": !isOpen })}>
+    <section className={cn("absolute z-50 md:static h-full w-80 overflow-auto border border-white/25 bg-black-pearl pt-10 px-5 pb-5", { "!absolute -left-80": !isOpen })}>
       <Image
         src="/assets/images/logo.png"
         alt=""

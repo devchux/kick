@@ -14,7 +14,7 @@ const DashboardLayout = ({
   className?: string;
 }) => {
   const isTablet = useMedia('(min-width: 768px)');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(isTablet);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

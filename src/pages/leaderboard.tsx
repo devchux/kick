@@ -13,7 +13,7 @@ import React from "react";
 
 const Leaderboard = () => {
   return (
-    <DashboardLayout className="pt-0">
+    <DashboardLayout className="!pt-0">
       <div className="flex justify-between">
         <div className="w-[calc(100%-9rem)]">
           <h4 className="text-lg font-medium mb-3.5">Hi Stella,</h4>
