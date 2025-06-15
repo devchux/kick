@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "../image";
 import Rating from "../ui/rating";
 import { Heart } from "lucide-react";
 import StartGame from "../games/start";
+import ArcadeDetails from "../games/arcade-details";
+import { useReducerState } from "@/hooks/use-reducer-state";
+
+type ModalState = {
+  startGame: boolean;
+  details: boolean;
+};
 
 const ArcadeCard = ({ hasLiked }: { hasLiked?: boolean }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useReducerState<ModalState>({
+    startGame: false,
+    details: false,
+  });
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
+  const toggleModal = (values: Partial<ModalState>) => {
+    setIsOpen(values);
   };
 
   return (
     <>
       <div
-        onClick={toggleModal}
+        onClick={() => toggleModal({ details: true })}
         className="h-[17.4rem] w-full sm:max-w-[22rem] overflow-hidden rounded-2xl bg-mirage cursor-pointer"
       >
         <Image
@@ -39,7 +49,17 @@ const ArcadeCard = ({ hasLiked }: { hasLiked?: boolean }) => {
           </button>
         </div>
       </div>
-      <StartGame key={isOpen.toString()} isOpen={isOpen} onClose={toggleModal} />
+      <ArcadeDetails
+        key={isOpen.details.toString()}
+        isOpen={isOpen.details}
+        onClose={() => toggleModal({ details: false })}
+        onStart={() => toggleModal({ startGame: true, details: false })}
+      />
+      <StartGame
+        key={isOpen.startGame.toString()}
+        isOpen={isOpen.startGame}
+        onClose={() => toggleModal({ startGame: false })}
+      />
     </>
   );
 };
